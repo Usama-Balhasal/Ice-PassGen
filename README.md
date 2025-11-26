@@ -2,6 +2,8 @@
 
 A secure, user-friendly password generator built with HTML, CSS, and JavaScript. Create strong, unique passwords with customizable options and real-time strength assessment.
 
+Access the live version at [https://icepassgen.netlify.app/](https://icepassgen.netlify.app/).
+
 ## Features
 
 - **Password & PIN Generation**: Choose between generating passwords or PINs
@@ -33,15 +35,9 @@ A secure, user-friendly password generator built with HTML, CSS, and JavaScript.
 - Provides strength assessment based on length and character variety
 - Includes educational security tips
 
-## Technologies Used
-
-- HTML5
-- CSS3 (with CSS Grid and Flexbox)
-- Vanilla JavaScript (ES6+)
-
 ## About the Author
 
-Created by Usama Balhasal, a developer passionate about cybersecurity and user-friendly security tools.
+Created by Usama Balhasal
 
 Connect with the developer:
 - [GitHub](https://github.com/Usama-Balhasal)
