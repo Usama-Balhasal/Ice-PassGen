@@ -16,19 +16,19 @@
             <button id="about-btn" class="action-btn" onclick="window.location.href='about-me.html'">About Me</button>
         </header>
 
-        <div class="generator-section">
-            <div class="mode-selector">
-                <label>
-                    <input type="radio" name="mode" value="password" checked>
+        <main class="generator-section">
+            <section class="mode-selector">
+                <label for="mode-password">
+                    <input type="radio" name="mode" value="password" id="mode-password" checked>
                     Password
                 </label>
-                <label>
-                    <input type="radio" name="mode" value="pin">
+                <label for="mode-pin">
+                    <input type="radio" name="mode" value="pin" id="mode-pin">
                     PIN
                 </label>
-            </div>
+            </section>
 
-            <div id="settings" class="settings">
+            <section id="settings" class="settings">
                 <div class="length-control">
                     <label for="length-slider">Length: <span id="length-value">12</span></label>
                     <input type="range" id="length-slider" min="4" max="64" value="12">
@@ -36,56 +36,45 @@
 
                 <div class="character-options">
                     <h3>Include Characters:</h3>
-                    <label>
-                        <input type="checkbox" id="uppercase" checked>
-                        Uppercase Letters
-                    </label>
-                    <label>
-                        <input type="checkbox" id="lowercase" checked>
-                        Lowercase Letters
-                    </label>
-                    <label>
-                        <input type="checkbox" id="numbers" checked>
-                        Numbers
-                    </label>
-                    <label>
-                        <input type="checkbox" id="symbols" checked>
-                        Symbols
-                    </label>
-                    <label>
-                        <input type="checkbox" id="avoid-ambiguous">
-                        Avoid Ambiguous Characters
-                    </label>
+                    <div>
+                        <label for="uppercase"><input type="checkbox" id="uppercase" checked> Uppercase (A-Z)</label>
+                        <label for="lowercase"><input type="checkbox" id="lowercase" checked> Lowercase (a-z)</label>
+                        <label for="numbers"><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+                        <label for="symbols"><input type="checkbox" id="symbols"> Symbols (!@#...)</label>
+                        <label for="avoid-ambiguous"><input type="checkbox" id="avoid-ambiguous"> Avoid Ambiguous (e.g. l, 1, I, O, 0)</label>
+                    </div>
                 </div>
 
-                <div class="custom-words">
-                    <h3>Custom Words</h3>
-                    <input type="text" id="custom-word" placeholder="Enter custom word">
-                    <button id="add-word-btn">Add Word</button>
+                <div class="custom-words-section">
+                    <h3>Custom Words (Optional):</h3>
+                    <div class="custom-word-input">
+                        <input type="text" id="custom-word" placeholder="Enter custom word">
+                        <button id="add-word-btn" class="action-btn">Add Word</button>
+                    </div>
                     <div id="word-list"></div>
                 </div>
-            </div>
+            </section>
 
             <div class="password-display">
-                <input type="text" id="password-output" readonly>
+                <input type="text" id="password-output" readonly maxlength="64">
                 <div class="btn-group">
-                    <button id="copy-btn">Copy</button>
-                    <button id="download-btn">Download</button>
+                    <button id="copy-btn" class="action-btn">Copy</button>
+                    <button id="download-btn" class="action-btn">Download</button>
                 </div>
 
             </div>
 
-            <button id="generate-btn" class="generate-btn">Generate Password</button>
+            <button id="generate-btn" class="generate-btn action-btn">Generate Password</button>
 
             <div class="strength-meter">
-                <div class="strength-bar">
+                <div class="strength-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                     <div id="strength-fill"></div>
                 </div>
-                <span id="strength-text">Password Strength: Weak</span>
+                <span id="strength-text" aria-live="polite">Password Strength: Weak</span>
             </div>
-        </div>
+        </main>
 
-        <div class="security-tips">
+        <section class="security-tips">
             <h3>Security Tips</h3>
             <ul>
                 <li>Avoid reusing passwords across accounts</li>
@@ -93,10 +82,10 @@
                 <li>Prefer long, complex passwords over shorter ones</li>
                 <li>Enable two-factor authentication when available</li>
             </ul>
-        </div>
+        </section>
 
         <footer>
-            <a id="theme-toggle">Toggle Dark Mode</a>
+            <a id="theme-toggle" href="#">Toggle Dark Mode</a>
         </footer>
     </div>
 
